@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", 'sans-serif';
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    z-index: 3;
+    padding: 25px 0;
+    padding-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+    gap: 50px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.content h1 {
+    font-size: 128px;
+    margin-bottom: -20px;
+}
+
+.content p {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+/*============================== ABOUT ==============================*/
+body {
+    background: black; 
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 100vh;
+
+}
+
+#header{ /* with hashtag since it's an ID */
+    width: 100%;
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Scrolling thru the background picture */
+}
+
+.container{
+    padding: 10px 10%; /* 10 pixel from top and bottom and 10% from left and right */ 
+}
+
+
+#about {
+    padding: 80px 0; 
+    color: #F7F7FF; 
+}
+
+.row{
+    display: flex; /*contents are side by side */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 40%; /*width of the col will be 35 */
+    text-align: left;
+}
+
+.about-col-1 img{
+    width: 93%;
+    margin-top: 5%;
+    border-radius: 58% 42% 35% 75% / 97% 50% 50% 53%; /*corner of the img will be round */
+    animation: morph 8s ease-in-out infinite;
+    height: auto;
+    top: 0;
+    
+}
+
+@keyframes morph{
+    0%{
+        border-radius: 57% 43% 68% 32% / 28% 49% 51% 72%
+    }
+    50%{
+        border-radius: 68% 57% 32% 43% / 82% 98% 49% 28%
+        ;
+    }
+    100%{
+        border-radius: 57% 43% 70% 30% / 28% 49% 51% 72%
+        ;
+    }
+}
+
+.about-col-2 {
+    flex-basis: 60%; /*space between img and About Me */
+    font-size: 20px;
+    margin-top: -5%;
+    justify-content: left;
+    padding-left: 5%;
+}
+
+.skills {
+    font-size: 100px;
+}
+
+.sub-title{
+    font-size: 55px; 
+    margin-top: 15%;
+    font-weight: 600; 
+    color: #F7F7FF;
+}
+
+
+.social-icons{
+    margin-top: 5%;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 37px;
+    margin-right: 10px;
+    color:#ababab; 
+    display: inline-block;
+    width: 10%;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color:#b03060;
+    transform: translateY(-5px);
+}
