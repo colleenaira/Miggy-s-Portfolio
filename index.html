@@ -10,15 +10,21 @@
 <body>
 
     <!--------------------LANDING PAGE---------------------->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#demo-reel">Demo Reel</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+
+<div id="header"> 
+    <div class="container"> 
+        <nav>   <!--<nav class="nav">-->
+            <ul>
+                <!--<li classs="nav-link">-->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#demo-reel">Demo Reel</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    
+    </div>
 
     <div class="video-container">
         <video autoplay muted loop id="background-video">
@@ -31,6 +37,8 @@
 
         </div>
     </div>
+</div>
+
 </body>
 </html>
 
@@ -38,29 +46,78 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1 padding-0">
-                    <img src="assets/solo_pic.jpg">
+                <div class="about-col-1"> <!-- COL 1 is the PICTURE-->
+                    <img src="assets/pic2.jpg">
+
+                    <div class="social-icons">
+                        <a href="https://vimeo.com/user108092446"><i class="fa-brands fa-vimeo" style="color: white"></i></a>
+                        <a href="https://miguelflores3d.artstation.com/"><i class="fa-brands fa-artstation" style="color: white"></i></a>
+                        <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin" style="color: white"></i></a>
+                        <a href="mailto:miguelflores0514@gmail.com"><i class="fa-sharp fa-solid fa-envelope" style="color:white"></i></a>
+                    </div>
                 </div>
+
     
-                <div class="about-col-2 padding-0">
+                <div class="about-col-2">   <!-- COL 2 is About Me Section-->
                     <h1 class="sub-title"> About Me </h1>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.  
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    
-                        <div class="skills"> 
-                            <h2 class="sub-title"> Skills</h2>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
 
-                        <div class="social-icons">
-                            <a href="https://instagram.com/"><i class="fa-brands fa-instagram" style="color: #d891ef"></i></a>
-                            <a href="https://www.linkedin.com/in/colleencipriano/"><i class="fa-brands fa-linkedin" style="color: #d891ef"></i></a>
-                            <a href="https://github.com/colleenaira"><i class="fa-brands fa-github" style="color: #d891ef"></i></a>
-                            <a href="mailto:colleencipriano@gmail.com"><i class="fa-sharp fa-solid fa-envelope" style="color:#d891ef"></i></a>
-                        </div>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>3D Software</span><br>Maya, Houdini, Blender</li>
+                            <li><span>Compositors</span><br>Nuke, Toxik, After Effects</li>
+                            <li><span>Rendering</span><br>Redshift, Mantra, Arnold, Mental Ray</li>
+                            <li><span>Real-time Engine Lighting</span><br>Unreal Engine</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-Current</span><br>ICON Creative Studio - Junior Lighter & Compositor</li>
+                            <li><span>2021-2022</span><br>Mainframe Studios - Junior Lighter & Compositor</li>
+                            <!-- <li><span>Rendering</span><br>Designing Web</li> -->
+                        </ul>
+                    </div>                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>British Columbia Institute of Technology (BCIT)</span><br>Diploma | 3D Modeling, Art and Animation<br><i>With Distinction</i></li>
+                            <!-- <li><span>Lighting</span><br>Designing Web</li> -->
+                        </ul>
+                    </div>                    
                 </div>
             </div>
         </div>
     </div>
 
 
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
 <!--"C:\Users\colle\Desktop\Miggy Portfolio\LP.mp4"-->
