@@ -128,7 +128,7 @@ body {
     min-height: 100vh;
 }
 
-#header{ /* with hashtag since it's an ID */
+#home{ /* with hashtag since it's an ID */
     width: 100%;
     height:100vh;
     background-size: cover;
@@ -271,37 +271,253 @@ body {
     display: block;    
 }
 
-/*============================== DEMO REEL ==============================*/
 
+/*============================== FIRST TRANSITION ==============================*/
 
 /* Parallax effect */
 .parallax {
-    background-image: url('assets/J6.jpeg'); /* Change this to the path of your transition image */
-    min-height: 100vh;
+    background-image: url('assets/jedi_proj.jpg');
+    min-height: 50vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    background-size: contain;
+    background-size: contain; /*works for long pics */
     justify-content: center;
     position: relative;
-    z-index: 0;
+    
+    margin-top: 350px; /* space between pic and about section */
 }
 
 .parallax-inner {
     color: white;
     text-align: center;
-    height: 100vh;
-    width: 100%;
 }
 
+
+/*============================== DEMO REEL ==============================*/
+.title {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
 .title h1{
     font-size: 70px;
     color: white;
     text-align: center;
+    margin-bottom: 40px;
+}
+
+.fancy {
+    position: relative;
+  white-space: nowrap;
+  &:after {
+    --deco-height: 0.3125em;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(var(--deco-height) * -0.625);
+    height: var(--deco-height);
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='%2386A8BF' stroke-width='12'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v64H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-size: auto 100%;
+    background-repeat: round;
+    background-position: 0em;
+  }
+}
+
+.reel-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100vw; /* Adjust max width as needed */
+    height: auto;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    position: relative;
+
+}
+
+
+/*============================== SECOND TRANSITION ==============================*/
+
+/* Parallax effect */
+.parallax2 {
+    background-image: url('assets/barbie_proj.jpg');
+    min-height: 80vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: -50%;
+}
+
+.parallax-inner2 {
+    color: white;
+    text-align: center;
 }
 
 /*============================== PROJECTS ==============================*/
+#projects{
+    padding: 20px 0;
+    text-align: center;
+    margin-top: -7%;
+}
+
+.projects-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 60px;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-item a {
+    text-decoration: none;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.project-item .overlay .text {
+    color: white;
+    padding: 20px;
+}
+
+.project-item .overlay .text h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.project-item .overlay .text p {
+    font-size: 1em;
+    margin: 0;
+}
+
+.project-item img {
+    transform: scale(1.05);
+}
+
+.project-item:hover .overlay {
+    opacity: 1;
+}
 /*============================== CONTACT ==============================*/
+footer {
+    background-image: url('assets/J6.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #000000; /* White text */
+    padding: 40px 0; /* Top and bottom padding */
+    text-align: center; /* Center align text */
+    margin-top: 10%;
+}
+
+footer h2 {
+    font-size: 3em; /* Font size for the title */
+    font-weight: 100%;
+    margin-bottom: 20px; /* Space below the title */
+}
+
+footer p {
+    margin: 20px 0; /* Vertical margin for paragraphs */
+    font-size: 130%;
+
+}
+
+footer a {
+    color: #000000; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+.back {
+    margin-bottom: -30px;
+}
+
+.contact-icons a {
+    margin: 0 30px; /* Horizontal margin for each icon */
+    font-size: 30px; /* Size of the icons */
+    color: #000000; /* White color for icons */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-icons a:hover {
+    transform: scale(1.3); /* Scale up icons on hover */
+}
+
+footer a[href="#top"] {
+    display: block; /* Make the back to top link a block element */
+    margin-top: 50px; /* Space above the back to top link */
+    font-size: 1em; /* Font size for the back to top link */
+}
+
+.copyright {
+    margin-top: 90px;
+}
+
+
+/* 
+.social-icons{
+    margin-top: 12%;
+    margin-left: 22%;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 40px;
+    margin-right: -7px;
+    color:#ababab; 
+    display: inline-block;
+    width: 20%;
+    transition: transform 0.4s;
+} */
+
+
+@media (max-width: 768px) {
+    .parallax {
+        background-size: contain; /* Contain for smaller screens */
+        background-position: center;
+    }
+}
+
+@media (min-width: 769px) {
+    .parallax {
+        background-size: contain; /* Cover for larger screens */
+        background-position: center;
+    }
+}
