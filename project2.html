@@ -25,13 +25,62 @@
 <div class="project-content">
     <h1>Barbie: It Takes Two</h1>
     <div class="poster">
-        <img src="assets/barbie_proj.jpg">
+        <img src="assets/barbie_proj.jpg" alt="Barbie: It Takes Two">
     </div>
 
     <div class="project-images">
-        <img src="assets/jedi_season1_1.jpg" alt="Season 1 Image 1">
-        <img src="assets/jedi_season1_2.jpg" alt="Season 1 Image 2">
+        <img src="assets/B/B1.jpg" alt="Image 1" onclick="openModal(this)">
+        <img src="assets/B/B2.jpg" alt="Image 2" onclick="openModal(this)">
+        <img src="assets/B/B3.jpg" alt="Image 3" onclick="openModal(this)">
+        <img src="assets/B/B4.jpg" alt="Image 4" onclick="openModal(this)">
+        <img src="assets/B/B5.jpg" alt="Image 5" onclick="openModal(this)">
+        <img src="assets/B/B6.jpg" alt="Image 6" onclick="openModal(this)">
+        <img src="assets/B/B7.jpg" alt="Image 7" onclick="openModal(this)">
+        <img src="assets/B/B8.jpg" alt="Image 8" onclick="openModal(this)">
+        <img src="assets/B/B1.jpg" alt="Image 1" onclick="openModal(this)">
+        <img src="assets/B/B2.jpg" alt="Image 2" onclick="openModal(this)">
+        <img src="assets/B/B3.jpg" alt="Image 3" onclick="openModal(this)">
+        <img src="assets/B/B4.jpg" alt="Image 4" onclick="openModal(this)">
+        <img src="assets/B/B5.jpg" alt="Image 5" onclick="openModal(this)">
+        <img src="assets/B/B6.jpg" alt="Image 6" onclick="openModal(this)">
+        <img src="assets/B/B7.jpg" alt="Image 7" onclick="openModal(this)">
+        <img src="assets/B/B8.jpg" alt="Image 8" onclick="openModal(this)">
     </div>
     
     <div class="back"><a href="index.html#projects">Back</a></div>
 </div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div id="caption"></div>
+</div>
+
+<script>
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("modalImg");
+
+    function openModal(imgElement) {
+        modal.style.display = "block";
+        modalImg.src = imgElement.src;
+        document.getElementById("caption").innerHTML = imgElement.alt;
+    }
+
+    modal.addEventListener("click", function(event) {
+        if (event.target !== modalImg) {
+            closeModal();
+        }
+    });
+
+    function closeModal() {
+        modal.style.display = "none";
+    }
+</script>
+
+
+
+
+</body>
+</html>
