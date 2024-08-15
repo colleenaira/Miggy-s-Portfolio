@@ -42,7 +42,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 550;
     position: relative;
 }
@@ -691,4 +691,8 @@ nav .fa-solid {
         font-size: 15px;
     }
 }
+
+
+
+
 
