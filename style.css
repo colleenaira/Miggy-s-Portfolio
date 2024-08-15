@@ -42,7 +42,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 20px; /*font size of home, about */
     font-weight: 550;
     position: relative;
 }
@@ -206,14 +206,14 @@ body {
 
 .about-col-2 {
     flex-basis: 60%; /*space between img and About Me */
-    font-size: 23px; /* font size of paragraph */
+    font-size: 22px; /* font size of paragraph */
     margin-top: -5%;
     justify-content: left;
     padding-left: 5%;
 }
 
 .sub-title{ /* About */
-    font-size: 90px; 
+    font-size: 70px; 
     margin-top: 15%;
     margin-bottom: 30px;
     font-weight: 600; 
@@ -229,7 +229,7 @@ body {
 
 .tab-links {
     margin-right: 50px;
-    font-size: 30px; /* font size of skills, exp, edu */
+    font-size: 1.3em; /* font size of skills, exp, edu */
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -253,7 +253,7 @@ body {
 }
 
 .tab-contents ul li{
-    font-size: 21px;
+    font-size: .9em;
     list-style: none;
     margin: 10px 0;
 }
@@ -372,7 +372,7 @@ body {
 }
 
 .sub-title2 {
-    font-size: 90px;
+    font-size: 75px;
     color: white;
     margin-top: 350px;
 }
