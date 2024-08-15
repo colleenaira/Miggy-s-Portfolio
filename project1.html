@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
+    <title>Star Wars: Young Jedi Adventures</title>
     <link rel="stylesheet" href="css/project1.css">
     <script src="https://kit.fontawesome.com/b904403a8d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
@@ -14,13 +14,16 @@
 
 <!-- Navigation -->
 <nav>
-    <ul>
+    <ul id="sidemenu">
         <li><a href="index.html#home">Home</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#demo-reel">Demo Reel</a></li>
         <li><a href="index.html#projects">Projects</a></li>
         <li><a href="index.html#contact">Contact</a></li>
+        <i class="fa-solid fa-x" onclick="closemenu()"></i> <!--close icon-->
     </ul>
+    <i class="fa-solid fa-bars" onclick="openmenu()"></i> <!--menu icon-->
+
 </nav>
 
 <!-- Project Content -->
@@ -51,6 +54,8 @@
             <img src="assets/J/J3.jpeg" alt="Image 2" onclick="openModal(this)">
             <img src="assets/J/J4.jpeg" alt="Image 3" onclick="openModal(this)">
             <img src="assets/J/J6.jpeg" alt="Image 4" onclick="openModal(this)">
+            <img src="assets/J/J2.jpeg" alt="Image 1" onclick="openModal(this)">
+            <img src="assets/J/J3.jpeg" alt="Image 2" onclick="openModal(this)">
         </div>
     </div>
 
@@ -60,6 +65,8 @@
             <img src="assets/J/J8.jpeg" alt="Image 6" onclick="openModal(this)">
             <img src="assets/J/J2.jpeg" alt="Image 1" onclick="openModal(this)">
             <img src="assets/J/J3.jpeg" alt="Image 2" onclick="openModal(this)">
+            <img src="assets/J/J7.jpeg" alt="Image 5" onclick="openModal(this)">
+            <img src="assets/J/J8.jpeg" alt="Image 6" onclick="openModal(this)">
         </div>
     </div>
 
@@ -148,215 +155,22 @@
 </script>
 
 
+<script>
 
-<!---@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap');
+    var sidemenu = document.getElementById("sidemenu");
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", 'sans-serif';
-    box-sizing: border-box;
-    background-color: black;
-}
+    function openmenu() {
+        sidemenu.style.right = "0";
 
-html, body {
-    height: 100%;
-    scroll-behavior: smooth;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0; /* navigation starts from the left edge */
-    width: 100%;
-    background: black;
-    z-index: 3;
-    padding: 25px 0;
-    display: flex;
-    justify-content: flex-end; /*align items to the right */
-    padding-right: 20px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: right;
-    gap: 50px;
-}
-
-nav ul li {
-    display: inline;
-    position: relative;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    position: relative;
-}
-
-nav ul li a:hover {
-    color: rgb(231, 168, 49); /* color of the text when hovered */
-}
-
-nav ul li a:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: 1px; /* pos of the line from the text */
-    left: 50%;
-    transform: translateX(-50%); /* line position */
-    background-color: rgb(231, 168, 49); /* color of the line effect */
-    visibility: hidden;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-nav ul li a:hover:before {
-    visibility: visible;
-    width: 115%; /* how long the line is */
-}
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+        
+    }
 
 
-/*===================== PROJECT CONTENT =====================*/
-
-.project-content {
-    padding: 20px;
-    text-align: center;
-    margin-top: 60px;
-}
-
-.project-content h1 {
-    font-size: 4em; 
-    margin-top: 50px;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.poster img {
-    width: 100%;
-    max-width: 800px; /* Adjust as needed */
-    height: auto;
-    margin-bottom: 50px;
-    border-radius: 8px;
-}
-
-.project-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-    grid-gap: 15px; /* Space between images */
-    margin: 20px 3%; /* 3% space between left/right borders */
-}
-
-.project-images img {
-    width: 100%;
-    height: auto;
-    border-radius: 2px;
-    transition: transform 0.3s;
-}
-
-.project-images img:hover {
-    transform: scale(1.02);
-}
-
-.back {
-    margin-top: 50px;
-}
-
-.back a {
-    color: white;
-    text-decoration: none;
-    font-size: 2.2em;
-}
-
-.back a:hover {
-    text-decoration: underline;
-    color:  rgb(231, 168, 49);;
-}
-
-/*===================== SEASON 1 AND 2 =====================*/
-
-.seasons.tabs {
-    display: flex;
-    margin: 20px 0 40px;
-    color: white;
-
-}
-
-.tab-links {
-    margin-right: 50px;
-    font-size: 30px; /* font size of skills, exp, edu */
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-    margin-top: 25px;  /*space between paragraph and links */
-}
+</script>
 
 
-
-
-
-
-/*===================== MODAL =====================*/
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 5; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 90%;
-    max-width: 60%;
-}
-
-.modal-content, .modal-caption {  
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 55px;
-    color: #f1f1f1;
-    font-size: 55px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}-->
+</body>
+</html>

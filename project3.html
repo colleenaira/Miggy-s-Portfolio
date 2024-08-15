@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
+    <title>Mermaid Power</title>
     <link rel="stylesheet" href="css/project3.css">
     <script src="https://kit.fontawesome.com/b904403a8d.js" crossorigin="anonymous"></script>
 </head>
@@ -18,7 +18,9 @@
         <li><a href="index.html#demo-reel">Demo Reel</a></li>
         <li><a href="index.html#projects">Projects</a></li>
         <li><a href="index.html#contact">Contact</a></li>
+        <i class="fa-solid fa-x" onclick="closemenu()"></i> <!--close icon-->
     </ul>
+    <i class="fa-solid fa-bars" onclick="openmenu()"></i> <!--menu icon-->
 </nav>
 
 <!-- Project Content -->
@@ -29,7 +31,7 @@
     </div>
 
     <div class="project-images">
-        <img src="assets/M/M1.jpg" alt="Image 1" onclick="openModal(this)">
+        <img src="assets/M/M4.jpg" alt="Image 1" onclick="openModal(this)">
         <img src="assets/M/M2.jpg" alt="Image 2" onclick="openModal(this)">
         <img src="assets/M/M3.jpg" alt="Image 3" onclick="openModal(this)">
         <img src="assets/M/M4.jpg" alt="Image 4" onclick="openModal(this)">
@@ -37,7 +39,7 @@
         <img src="assets/M/M6.jpg" alt="Image 6" onclick="openModal(this)">
         <img src="assets/M/M7.jpg" alt="Image 7" onclick="openModal(this)">
         <img src="assets/M/M8.jpg" alt="Image 8" onclick="openModal(this)">
-        <img src="assets/M/M1.jpg" alt="Image 1" onclick="openModal(this)">
+        <img src="assets/M/M4.jpg" alt="Image 1" onclick="openModal(this)">
         <img src="assets/M/M2.jpg" alt="Image 2" onclick="openModal(this)">
         <img src="assets/M/M3.jpg" alt="Image 3" onclick="openModal(this)">
         <img src="assets/M/M4.jpg" alt="Image 4" onclick="openModal(this)">
@@ -80,10 +82,22 @@
 </script>
 
 
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+        
+    }
+
+
 </script>
-
-
-
 
 </body>
 </html>

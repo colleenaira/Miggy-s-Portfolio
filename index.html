@@ -13,15 +13,17 @@
 
 <div id="home"> 
     <div class="container"> 
-        <nav>   <!--<nav class="nav">-->
-            <ul>
+        <nav>  
+            <ul id="sidemenu">
                 <!--<li classs="nav-link">-->
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#demo-reel">Demo Reel</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i> <!--close icon-->
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i> <!--menu icon-->
         </nav>
     </div>
 
@@ -39,8 +41,7 @@
 </div>
 
 
-<!--------------------ABOUT ME 
-       <h1 class="sub-title"><span class="fancy">Projects</span></h1>---------------------->
+<!--------------------ABOUT ME---------------------->
 <div id="about">
     <div class="container">
         <div class="row">
@@ -50,7 +51,7 @@
 
                 <div class="social-icons">
                     <a href="https://vimeo.com/user108092446"><i class="fa-brands fa-vimeo" style="color: white"></i></a>
-                    <a href="https://miguelflores3d.artstation.com/"><i class="fa-brands fa-artstation" style="color: white"></i></a>
+                    <a href=""><i class="fa-brands fa-artstation" style="color: white"></i></a>
                     <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin" style="color: white"></i></a>
                 </div>
             </div>
@@ -78,15 +79,15 @@
 
                 <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>2022-Current</span><br>ICON Creative Studio - Junior Lighter & Compositor</li>
-                        <li><span>2021-2022</span><br>Mainframe Studios - Junior Lighter & Compositor</li>
+                        <li><span>2022-Current</span><br>Creative Studio - Junior Lighter & Compositor</li>
+                        <li><span>2021-2022</span><br>Studios - Junior Lighter & Compositor</li>
                         <!-- <li><span>Rendering</span><br>Designing Web</li> -->
                     </ul>
                 </div>        
 
                 <div class="tab-contents" id="education">
                     <ul>
-                        <li><span>British Columbia Institute of Technology (BCIT)</span><br>Diploma | 3D Modeling, Art and Animation<br><i>With Distinction</i></li>
+                        <li><span>British of Technology </span><br>Diploma | 3D Modeling, Art and Animation<br><i>With Distinction</i></li>
                         <!-- <li><span>Lighting</span><br>Designing Web</li> -->
                     </ul>
                 </div>                    
@@ -125,7 +126,7 @@
 <!--------------------PROJECTS---------------------->
 <div id="projects">
     <div class="container">
-        <h1 class="sub-title"><span class="fancy">Projects</span></h1>
+        <h1 class="sub-title2"><span class="fancy">Projects</span></h1>
 
         <div class="projects-list">
             <div class="project-item">
@@ -185,7 +186,7 @@
         <div class="overlay">
             <div class="container">
                 <h2>Let's chat!</h2>
-                <p>Saskatchewan, AA | <a href="mailto:sssss@gmail.com">ssss@gmail.com</a> | <a href="https://www.linkedin.com">LinkedIn</a></p>
+                <p>Vancouver, BC | <a href="mailto:sssss@gmail.com">ssss@gmail.com</a> | <a href="https://www.linkedin.com">LinkedIn</a></p>
                 <div class="contact-icons">
                     <a href="https://vimeo.com/"><i class="fa-brands fa-vimeo" style="color: white"></i></a>
                     <a href="https://3d.artstation.com/"><i class="fa-brands fa-artstation" style="color: white"></i></a>
@@ -220,8 +221,25 @@
 
 </script>
 
+<script>
 
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+        
+    }
+
+
+</script>
 
 </body>
 </html>
 
+
+
+<!--https://miguelflores3d.artstation.com/-->
